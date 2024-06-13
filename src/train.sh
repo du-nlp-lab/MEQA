@@ -1,0 +1,9 @@
+CUDA_VISIBLE_DEVICES=0,1 python tune/t5.py -m t5-small -E 6
+CUDA_VISIBLE_DEVICES=0,1 python tune/t5.py -e -p -m t5-small -E 6
+CUDA_VISIBLE_DEVICES=0,1 python tune/t5.py -g golden-event -m t5-small -E 6
+CUDA_VISIBLE_DEVICES=0,1 python tune/t5.py -e -m t5-small -E 6
+CUDA_VISIBLE_DEVICES=0,1 python tune/t5.py -e -g golden-entity -m t5-small -E 6
+CUDA_VISIBLE_DEVICES=0,1 python tune/t5.py -e -g golden-trigger -m t5-small -E 6
+CUDA_VISIBLE_DEVICES=0,1 python tune/t5.py -e -g predict-entity-graph -m t5-small -E 6
+CUDA_VISIBLE_DEVICES=0,1 python tune/t5.py -e -g golden-trigger-arguments -m t5-small -E 6
+CUDA_VISIBLE_DEVICES=0,1 python tune/t5.py -e -g golden-event -m t5-small -E 6

@@ -1,0 +1,41 @@
+# data paths
+train_csv: data/wikievent/train_mturk.csv
+dev_csv: data/wikievent/dev_mturk.csv
+test_csv: data/wikievent/test_mturk.csv
+train_path: data/wikievent/train.jsonl
+dev_path: data/wikievent/dev.jsonl
+test_path: data/wikievent/test.jsonl
+template_path: data/wikievent/annotated_templates_new.json
+annotated_path: data/annotation/all_annotated_data.ori.json
+s2_example: data/wikievent/example.json
+relation_pairs: data/wikievent/relation_pairs.json
+
+# temporal annotations
+doc1_relations: data/wikievent/relations.txt
+
+# results
+strategy_all_data: results/sample_data.json
+strategy_1_data: results/sample_s1.json
+strategy_2_data: results/sample_s2.json
+strategy_3_data: results/sample_s3.json
+strategy_4_data: results/sample_s4.json
+
+# openai configs
+openai_key: keys/openai_key
+openai_org_id: keys/openai_org_id
+
+# control
+debug: False
+strategies: ["s4"] # "s1", "s2", "s3", "s4"
+human_rephrase: False
+prediction: False
+# relation
+generate_relation: False
+use_doc1_relation: False
+# strategy 1
+max_r_pair_per_doc: 7
+# strategy 2
+max_events: 2 # for strategy 2 only
+s2_cot: False
+max_q_per_doc_hop: 5
+
